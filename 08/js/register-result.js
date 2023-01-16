@@ -16,13 +16,13 @@ function newRegister() {
 
   var removeBttns = document.querySelectorAll(".del");
 
-  for (let i = 0; i < removeBttns.length; i++) {
-    removeBttns[i].addEventListener("click", alert("hi"));
-  }
-  // for (var i = 0; i < removeBttns.length; i++) {
-  //   removeBttns[i].addEventListener("click", function () {
-  //     if (this.parentNode.parentNode)
-  //       this.parentNode.parentNode.removeChild(this.parentNode); //
-  //   });
+  // for (let i = 0; i < removeBttns.length; i++) {
+  //   removeBttns[i].addEventListener("click", alert("hi"));
   // }
+  for (var i = 0; i < removeBttns.length; i++) {
+    removeBttns[i].addEventListener("click", function () {
+      if (this.parentNode.parentNode)
+        this.parentNode.parentNode.removeChild(this.parentNode); //
+    });
+  }
 }
